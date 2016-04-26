@@ -4,9 +4,9 @@ $(document).ready(function() {
 	x.onreadystatechange  = function() {
 		if (x.readyState == 4) {
 			token = x.responseText.substring(5);
-			document.getElementById("token").innerText  = token;
+			document.getElementById("tokenVasco").innerText  = token;
 			clipboard.copy(token);
-		} else { document.getElementById("token").innerText  = "error: cargar de vuelta"; }
+		} else { document.getElementById("tokenVasco").innerText  = "error: cargar de vuelta"; }
 	}; 
 	x.send();
 	
