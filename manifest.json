@@ -1,0 +1,25 @@
+{
+	"name": "Vasco Go3 Demo Token",
+	"version": "0.1",
+	"manifest_version": 2,
+	"description": "Vasco Digipass Go 3 Demo Token generator",
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "Vasco Digipass Go 3 Demo Token generator",
+		"default_popup": "extension.html"
+	},
+	"content_scripts": [
+    {
+			"matches": ["http://demotoken.vasco.com/*"],
+      "css": ["style.css"],
+      "js": ["jquery.js", "getToken.js","clipboard.min.js"],
+      "run_at": "document_end"
+    }
+  ],
+	"permissions": [
+  "http://demotoken.vasco.com/*"
+	],
+	"icons": {
+		"128": "icon.png"
+	}
+}
